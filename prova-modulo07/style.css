@@ -1,0 +1,374 @@
+/*                                              Prova - Módulo 07
+
+    Crie uma página HTML e siga os passos abaixo:
+
+    Defina Variáveis para Tamanhos:
+    - Crie variáveis CSS para armazenar os tamanhos de fontes e espaçamentos e diferentes tamanhos de tela(pequena, média e grande).
+    - Defina essas variáveis no seletor :root.
+
+    Aplique as Variáveis:
+    - Utilize as variáveis CSS para definir o tamanho da fonte dos cabeçalhos e o espaçamento entre elementos.
+    - Modifique as variáveis em um @media query para ajustar o layout em diferentes tamanhos de tela.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Telas 2k (Desktop) */
+@media (min-width: 1920px) and (max-width: 2560px){
+    @import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Creepster&family=Eater&family=Fjalla+One&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Trocchi&display=swap');
+
+    :root {
+        --cor-do-fundo-cabeçalho: rgba(0, 0, 255, 0.63);
+        --cor-links: rgba(255, 255, 0, 0.89);
+        --backgroud-color-body: rgba(0, 0, 0, 0.356);
+        --cor-da-logo: white;
+        --tamanho-logo: 2.8rem;
+        --tamanho-fonte: 23px;
+        --fonte: "Roboto", sans-serif;
+        --conteiner: space-between;
+        --negrito: bold;
+        --padding: 20px;
+    }    
+    
+    /*  Cabeçalho  */
+    body {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.199);
+        
+    }
+    
+    
+    .conteiner {
+        display: flex;
+        justify-content: var(--conteiner);
+        background-color: var(--backgroud-color-body);
+        align-items: center;
+        background-color: var(--cor-do-fundo-cabeçalho);
+        padding: var(--padding);  
+        box-shadow: 0px, 0px, 15px, gray; 
+        border-radius: 10px;
+    }
+    
+    .conteiner .links{
+        display: flex;
+        gap: 20px;
+        
+    }
+    
+    .logo h1 {
+        font-size: var(--tamanho-logo);
+        display: flex;
+    }
+    
+    .logo a {
+        text-decoration: none;
+        color: black;
+        font-family: "Oswald", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .links a {
+        color: var(--cor-links);
+        text-decoration: none;
+        font-size: var(--tamanho-fonte);
+        font-weight: var(--negrito);
+    }
+    
+    /* Conteúdo principal */
+    
+    .conteiner-principal {
+        background-color: var(--backgroud-color-body);
+        font-size: var(--tamanho-fonte);
+        font-family: var(--fonte);
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px 0px 20px 0px;
+        box-shadow:5px 5px 5px gray;
+        margin: 20px;
+    }
+    
+    .conteiner-principal .logo2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--padding);
+    }
+    
+    .conteiner-principal .corpo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+
+}
+
+/* Telas 1080p (Desktop)*/
+@media (min-width: 1025px) and (max-width: 1920px) {
+
+    @import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Creepster&family=Eater&family=Fjalla+One&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Trocchi&display=swap');
+
+    :root {
+        --cor-do-fundo-cabeçalho: rgba(0, 0, 255, 0.63);
+        --cor-links: rgba(255, 255, 0, 0.89);
+        --backgroud-color-body: rgba(0, 0, 0, 0.356);
+        --cor-da-logo: white;
+        --tamanho-fonte: 22px;
+        --tamanho-logo: 2.5rem;
+        --fonte: "Roboto", sans-serif;
+        --conteiner: space-between;
+        --negrito: bold;
+        --padding: 20px;
+    }    
+    
+    /*  Cabeçalho  */
+    body {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.199);
+        
+    }
+    
+    
+    .conteiner {
+        display: flex;
+        justify-content: var(--conteiner);
+        background-color: var(--backgroud-color-body);
+        align-items: center;
+        background-color: var(--cor-do-fundo-cabeçalho);
+        padding: var(--padding);  
+        box-shadow: 0px, 0px, 15px, gray; 
+        border-radius: 10px;
+    }
+    
+    .conteiner .links{
+        display: flex;
+        gap: 20px;
+        font-size: var(--tamanho-fonte);
+    }
+    
+    .logo h1 {
+        font-size: var(--tamanho-logo);
+        display: flex;
+    }
+    
+    .logo a {
+        text-decoration: none;
+        color: black;
+        font-family: "Oswald", Tahoma, Geneva, Verdana, sans-serif;
+        
+    }
+    
+    .links a {
+        color: var(--cor-links);
+        text-decoration: none;
+        font-weight: var(--negrito);
+        
+    }
+    
+    /* Conteúdo principal */
+    
+    .conteiner-principal {
+        background-color: var(--backgroud-color-body);
+        font-size: var(--tamanho-fonte);
+        font-family: var(--fonte);
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px 0px 20px 0px;
+        box-shadow:5px 5px 5px gray;
+        margin: 20px;
+    }
+    
+    .conteiner-principal .logo2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--padding);
+    }
+    
+    .conteiner-principal .corpo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+/* Telas 1024 (tablet) */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Creepster&family=Eater&family=Fjalla+One&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Trocchi&display=swap');
+
+:root {
+        --cor-do-fundo-cabeçalho: rgba(0, 0, 255, 0.63);
+        --cor-links: rgba(255, 255, 0, 0.89);
+        --backgroud-color-body: rgba(0, 0, 0, 0.356);
+        --cor-da-logo: white;
+        --tamanho-fonte: 20px;
+        --tamanho-logo:2.5rem;
+        --fonte: "Oswald", sans-serif;
+        --negrito: bold;
+        --padding: 10px;
+        --conteiner: space-between;
+    }
+
+
+/*  Cabeçalho  */
+body {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.199);
+    
+}
+
+
+.conteiner {
+    display: flex;
+    justify-content: var(--conteiner);
+    background-color: var(--backgroud-color-body);
+    align-items: center ;
+    background-color: var(--cor-do-fundo-cabeçalho);
+    padding: var(--padding);  
+    box-shadow: 0px, 0px, 15px, gray; 
+    border-radius: 10px;
+}
+
+.conteiner .links{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.logo h1 {
+    font-size: var(--tamanho-logo);
+    display: flex;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    font-family: "Oswald", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.links a {
+    color: var(--cor-links);
+    text-decoration: none;
+    font-size: var(--tamanho-fonte);
+    font-weight: var(--negrito);
+}
+
+/* Conteúdo principal */
+
+.conteiner-principal {
+    background-color: var(--backgroud-color-body);
+    font-size: var(--tamanho-fonte);
+    font-family: var(--fonte);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px 0px 20px 0px;
+    box-shadow:5px 5px 5px gray;
+    margin: 20px;
+}
+
+.conteiner-principal .logo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding);
+}
+
+.conteiner-principal .corpo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+}
+
+@media (max-width: 600px) {
+    @import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Creepster&family=Eater&family=Fjalla+One&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Trocchi&display=swap');
+
+    :root {
+        --cor-do-fundo-cabeçalho: rgba(0, 0, 255, 0.63);
+        --cor-links: rgba(255, 255, 0, 0.89);
+        --backgroud-color-body: rgba(0, 0, 0, 0.356);
+        --cor-da-logo: white;
+        ---tamanho-fonte: 20px;
+        --fonte: "Oswald", sans-serif;
+        --negrito: bold;
+        --padding: 10px;
+    }
+
+
+/*  Cabeçalho  */
+body {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.199);
+    
+}
+
+
+.conteiner {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--backgroud-color-body);
+    align-items: center ;
+    background-color: var(--cor-do-fundo-cabeçalho);
+    padding: 5px;  
+    box-shadow: 0px, 0px, 15px, gray; 
+    border-radius: 10px;
+}
+
+.conteiner .links{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.logo h1 {
+    font-size: 2rem;
+    display: flex;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    font-family: "Oswald", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.links a {
+    color: var(--cor-links);
+    text-decoration: none;
+    font-size: var(---tamanho-fonte);
+    font-weight: var(--negrito);
+}
+
+/* Conteúdo principal */
+
+.conteiner-principal {
+    background-color: var(--backgroud-color-body);
+    font-size: var(---tamanho-fonte);
+    font-family: var(--fonte);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px 0px 20px 0px;
+    box-shadow:5px 5px 5px gray;
+    margin: 20px;
+}
+
+.conteiner-principal .logo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding);
+}
+
+.conteiner-principal .corpo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+}
